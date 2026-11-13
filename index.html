@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shobhit Negi – MCA Student and Developer</title>
+<meta name="description" content="Portfolio of Shobhit Negi: projects, skills and contact details.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#eef2f7; --surface:#ffffff; --ink:#14213d; --muted:#51607a;
+  --line:#d3dbe8; --accent:#2b50ff; --accent-ink:#ffffff; --tag:#e2e9ff;
+  --display:"Bricolage Grotesque",Georgia,"Times New Roman",serif;
+  --body:"Instrument Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#0e1424;--surface:#161e33;--ink:#e8edf8;--muted:#9aa8c4;--line:#27314d;--accent:#7b93ff;--accent-ink:#0e1424;--tag:#1f2a4f}
+}
+:root[data-theme="dark"]{--bg:#0e1424;--surface:#161e33;--ink:#e8edf8;--muted:#9aa8c4;--line:#27314d;--accent:#7b93ff;--accent-ink:#0e1424;--tag:#1f2a4f}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:5rem}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 var(--body)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:68rem;margin:0 auto;padding:0 1.5rem}
+header.nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:4rem}
+.brand{font:800 1.15rem var(--display);text-decoration:none}
+.nav ul{display:flex;gap:1.5rem;list-style:none;margin:0;padding:0;align-items:center}
+.nav a.l{text-decoration:none;color:var(--muted);font-weight:500;font-size:.95rem}
+.nav a.l:hover{color:var(--ink)}
+button.theme{background:none;border:1px solid var(--line);color:var(--ink);border-radius:999px;width:2.2rem;height:2.2rem;cursor:pointer;font-size:1rem}
+@media(max-width:640px){.nav ul li:not(:last-child){display:none}}
+
+.hero{padding:clamp(4rem,12vw,9rem) 0 clamp(3rem,8vw,6rem)}
+.hero h1{font:800 clamp(3.2rem,12vw,9rem)/.92 var(--display);letter-spacing:-.04em;margin:0 0 2rem}
+.hero p.lead{font-size:clamp(1.15rem,2.2vw,1.5rem);line-height:1.5;max-width:36rem;color:var(--muted);margin:0 0 2rem}
+.hero p.lead b{color:var(--ink);font-weight:600}
+.cta{display:flex;flex-wrap:wrap;gap:.75rem}
+.btn{display:inline-block;padding:.8rem 1.4rem;border-radius:.6rem;font-weight:600;text-decoration:none;border:1px solid var(--ink)}
+.btn.p{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.btn:hover{transform:translateY(-1px)}
+.stats{display:flex;flex-wrap:wrap;gap:2.5rem;margin-top:3.5rem;padding-top:1.5rem;border-top:1px solid var(--line)}
+.stats div{min-width:6rem}
+.stats strong{display:block;font:800 2rem/1 var(--display)}
+.stats span{color:var(--muted);font-size:.95rem}
+
+section{padding:clamp(3rem,7vw,5.5rem) 0;border-top:1px solid var(--line)}
+h2{font:800 clamp(1.9rem,4vw,2.8rem)/1.05 var(--display);letter-spacing:-.025em;margin:0 0 2rem}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+@media(max-width:760px){.about{grid-template-columns:1fr;gap:1.5rem}}
+.about p{margin:0 0 1rem;max-width:34rem}
+.skills{display:grid;gap:1.25rem}
+.skills h3{font:600 1rem var(--body);margin:0 0 .5rem}
+.tags{display:flex;flex-wrap:wrap;gap:.5rem}
+.tag{background:var(--tag);padding:.3rem .8rem;border-radius:999px;font-size:.92rem;font-weight:500}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(19rem,1fr));gap:1.25rem}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:.9rem;padding:1.4rem;display:flex;flex-direction:column;text-decoration:none;transition:border-color .15s,transform .15s}
+.card:hover{border-color:var(--accent);transform:translateY(-2px)}
+.card h3{font:800 1.3rem/1.2 var(--display);margin:0 0 .5rem;word-break:break-word}
+.card p{margin:0 0 1.2rem;color:var(--muted);font-size:.98rem;flex:1}
+.meta{display:flex;gap:1rem;font-size:.9rem;color:var(--muted);align-items:center}
+.dot{width:.7rem;height:.7rem;border-radius:50%;background:var(--accent);display:inline-block;margin-right:.35rem}
+.note{color:var(--muted)}
+
+.timeline{display:grid;gap:2rem}
+.job{display:grid;grid-template-columns:11rem 1fr;gap:1.5rem}
+@media(max-width:640px){.job{grid-template-columns:1fr;gap:.25rem}}
+.job time{color:var(--muted);font-size:.95rem;padding-top:.2rem}
+.job h3{font:800 1.25rem var(--display);margin:0 0 .4rem}
+.job ul{margin:.5rem 0 0;padding-left:1.1rem;color:var(--muted)}
+
+.contact p{font-size:1.2rem;max-width:34rem;color:var(--muted);margin:0 0 1.5rem}
+.links{display:flex;flex-wrap:wrap;gap:.75rem}
+footer{padding:2rem 0 3rem;color:var(--muted);font-size:.92rem;border-top:1px solid var(--line)}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+@media(prefers-reduced-motion:no-preference){.hero h1{animation:rise .7s ease-out both}@keyframes rise{from{opacity:0;transform:translateY(18px)}}}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top">Shobhit Negi</a>
+    <ul>
+      <li><a class="l" href="#about">About</a></li>
+      <li><a class="l" href="#projects">Projects</a></li>
+      <li><a class="l" href="#experience">Education</a></li>
+      <li><a class="l" href="#contact">Contact</a></li>
+      <li><button class="theme" id="theme" aria-label="Toggle light or dark theme">◐</button></li>
+    </ul>
+  </div>
+</header>
+
+<main id="top">
+<div class="wrap">
+
+  <div class="hero">
+    <h1>Shobhit<br>Negi</h1>
+    <p class="lead"><b id="role"></b> <span id="tagline"></span></p>
+    <div class="cta">
+      <a class="btn p" href="#projects">See my projects</a>
+      <a class="btn" id="mailBtn" href="#contact">Get in touch</a>
+    </div>
+    <div class="stats" id="stats" aria-live="polite"></div>
+  </div>
+
+  <section id="about">
+    <h2>About me</h2>
+    <div class="about">
+      <div id="bio"></div>
+      <div class="skills" id="skills"></div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <p class="note" id="projNote">Loading my latest repositories from GitHub…</p>
+    <div class="grid" id="projects-grid"></div>
+  </section>
+
+  <section id="experience">
+    <h2>Education</h2>
+    <div class="timeline" id="timeline"></div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Let’s work together</h2>
+    <p id="contactText"></p>
+    <div class="links" id="links"></div>
+  </section>
+
+</div>
+</main>
+
+<footer>
+  <div class="wrap">© <span id="year"></span> Shobhit Negi. Built with plain HTML, CSS and JavaScript, hosted on GitHub Pages.</div>
+</footer>
+
+<script>
+/* ============================================================
+   EDIT THIS BLOCK: everything on the page comes from here.
+   Projects are pulled automatically from your GitHub account.
+   ============================================================ */
+const CONFIG = {
+  github: "ShobhitNegi2511",
+  role: "MCA student and developer.",
+  tagline: "I study at Graphic Era University, Dehradun, and build software with a focus on clean, maintainable code.",
+  email: "shobhitnegi.39593@gmail.com",
+  linkedin: "",                            // EDIT: e.g. "https://www.linkedin.com/in/your-handle"
+  bio: [
+    "I’m a developer who enjoys turning messy problems into simple, working software. I like understanding how things work end to end, from the data to the interface.",
+    "Outside of work I’m learning new tools, contributing to side projects and sharing what I figure out along the way."
+  ],
+  skills: {
+    "Languages": ["Python", "JavaScript", "C++", "SQL"],
+    "Tools and platforms": ["Git", "GitHub", "Linux", "Docker"],
+    "Currently learning": ["System design", "Cloud basics"]
+  },
+  pinned: [],                              // optional: ["repo-name-1","repo-name-2"] to choose which repos show first
+  maxProjects: 6,
+  timeline: [                              // EDIT or delete entries
+    { when: "2025 – 2027", title: "Master of Computer Applications (MCA), Graphic Era University, Dehradun", points: [] },
+    { when: "2022 – 2025", title: "Bachelor of Computer Applications (BCA), Graphic Era University, Dehradun", points: [] }
+  ]
+};
+/* ============================================================ */
+
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+
+$("role").textContent = CONFIG.role;
+$("tagline").textContent = CONFIG.tagline;
+$("year").textContent = new Date().getFullYear();
+$("bio").innerHTML = CONFIG.bio.map(p => `<p>${esc(p)}</p>`).join("");
+$("skills").innerHTML = Object.entries(CONFIG.skills).map(([k, v]) =>
+  `<div><h3>${esc(k)}</h3><div class="tags">${v.map(t => `<span class="tag">${esc(t)}</span>`).join("")}</div></div>`).join("");
+$("timeline").innerHTML = CONFIG.timeline.map(j =>
+  `<div class="job"><time>${esc(j.when)}</time><div><h3>${esc(j.title)}</h3><ul>${j.points.map(p => `<li>${esc(p)}</li>`).join("")}</ul></div></div>`).join("");
+$("contactText").textContent = "I’m open to new roles, collaborations and interesting problems. The fastest way to reach me is email.";
+
+const links = [
+  [`mailto:${CONFIG.email}`, "Email me", true],
+  [`https://github.com/${CONFIG.github}`, "GitHub"],
+  ...(CONFIG.linkedin ? [[CONFIG.linkedin, "LinkedIn"]] : [])
+];
+$("links").innerHTML = links.map(([h, t, p]) => `<a class="btn${p ? " p" : ""}" href="${esc(h)}" ${h.startsWith("http") ? 'target="_blank" rel="noopener"' : ""}>${esc(t)}</a>`).join("");
+$("mailBtn").href = `mailto:${CONFIG.email}`;
+
+/* Theme toggle (remembers choice) */
+const root = document.documentElement;
+try { const t = localStorage.getItem("theme"); if (t) root.dataset.theme = t; } catch (e) {}
+$("theme").addEventListener("click", () => {
+  const dark = root.dataset.theme ? root.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+  root.dataset.theme = dark ? "light" : "dark";
+  try { localStorage.setItem("theme", root.dataset.theme); } catch (e) {}
+});
+
+/* Live projects from the GitHub API */
+(async () => {
+  const grid = $("projects-grid"), note = $("projNote");
+  try {
+    const res = await fetch(`https://api.github.com/users/${CONFIG.github}/repos?per_page=100&sort=updated`);
+    if (!res.ok) throw new Error(res.status);
+    let repos = (await res.json()).filter(r => !r.fork && r.name.toLowerCase() !== `${CONFIG.github}.github.io`.toLowerCase() && r.name !== CONFIG.github);
+
+    const stats = [[repos.length, "public repositories"]];
+    const langs = {};
+    repos.forEach(r => r.language && (langs[r.language] = (langs[r.language] || 0) + 1));
+    const top = Object.entries(langs).sort((a, b) => b[1] - a[1])[0];
+    if (top) stats.push([top[0], "most used language"]);
+    const stars = repos.reduce((n, r) => n + r.stargazers_count, 0);
+    if (stars) stats.push([stars, "stars earned"]);
+    $("stats").innerHTML = stats.map(([n, l]) => `<div><strong>${esc(n)}</strong><span>${l}</span></div>`).join("");
+
+    const rank = r => (CONFIG.pinned.includes(r.name) ? 1e6 - CONFIG.pinned.indexOf(r.name) : 0) + r.stargazers_count * 10 + (r.description ? 5 : 0);
+    repos.sort((a, b) => rank(b) - rank(a) || new Date(b.pushed_at) - new Date(a.pushed_at));
+    repos = repos.slice(0, CONFIG.maxProjects);
+
+    if (!repos.length) { note.textContent = "No public projects yet. New work will appear here automatically."; return; }
+    note.hidden = true;
+    grid.innerHTML = repos.map(r => `
+      <a class="card" href="${esc(r.homepage || r.html_url)}" target="_blank" rel="noopener">
+        <h3>${esc(r.name.replace(/[-_]/g, " "))}</h3>
+        <p>${esc(r.description || "No description yet.")}</p>
+        <div class="meta">
+          ${r.language ? `<span><i class="dot"></i>${esc(r.language)}</span>` : ""}
+          ${r.stargazers_count ? `<span>★ ${r.stargazers_count}</span>` : ""}
+          <span>Updated ${new Date(r.pushed_at).toLocaleDateString("en", { month: "short", year: "numeric" })}</span>
+        </div>
+      </a>`).join("");
+  } catch (e) {
+    note.innerHTML = `Couldn’t load projects right now. <a href="https://github.com/${esc(CONFIG.github)}?tab=repositories" target="_blank" rel="noopener">View them on GitHub</a>.`;
+  }
+})();
+</script>
+</body>
+</html>
